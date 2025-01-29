@@ -5,8 +5,6 @@ import board
 import usb_cdc
 import usb_hid
 import digitalio
-from adafruit_hid.keycode import Keycode
-from adafruit_hid.keyboard import Keyboard
 
 # Interface Setup
 led_pin = board.GP15
@@ -20,7 +18,6 @@ led.direction = digitalio.Direction.OUTPUT
 button = digitalio.DigitalInOut(btn_pin)
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
-keyboard = Keyboard(usb_hid.devices)
 
 while True:
     # Incoming Loop
